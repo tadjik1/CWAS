@@ -24,13 +24,13 @@ usage: kwas --region=REGION --service=SERVICE [<flags>] <url>
 [K]WAS - Curl With AWS Signing.
 
 Flags:
-      --help             Show context-sensitive help (also try --help-long and --help-man).
-      --region=REGION    AWS region
-      --service=SERVICE  AWS Service short name
-  -X, --method="GET"     Request method.
-  -d, --body=""          Request body.
-  -H, --header=HEADER    Request headers (could be an array).
-      --version          Show application version.
+      --help               Show context-sensitive help (also try --help-long and --help-man).
+      --region=REGION      AWS region
+      --service=SERVICE    AWS Service short name
+  -X, --method="GET"       Request method.
+  -d, --body=""            Request body.
+  -H, --header=HEADER ...  Request headers (could be an array).
+      --version            Show application version.
 
 Args:
   <url>  Request url
