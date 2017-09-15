@@ -1,4 +1,4 @@
-# [K]WAS - Curl With AWS Signing
+# /K/WAS - cURL With AWS Signing
 
 Extremely useful CLI utility that helps you send HTTP requests to AWS. 
  
@@ -21,7 +21,7 @@ HTTP requests to AWS API.
 ```bash
 usage: kwas --region=REGION --service=SERVICE [<flags>] <url>
 
-[K]WAS - Curl With AWS Signing.
+/K/WAS - cURL With AWS Signing.
 
 Flags:
       --help               Show context-sensitive help (also try --help-long and --help-man).
