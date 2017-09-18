@@ -3,7 +3,6 @@ package main
 import (
 	"bytes"
 	"fmt"
-	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/aws/signer/v4"
 	"gopkg.in/alecthomas/kingpin.v2"
 	"io/ioutil"
@@ -11,6 +10,7 @@ import (
 	"net/http"
 	"strings"
 	"time"
+	"github.com/aws/aws-sdk-go/aws/credentials"
 )
 
 type HTTPHeaderValue http.Header
@@ -62,11 +62,8 @@ func main() {
 
 	kingpin.Parse()
 
-	sess, err := session.NewSession()
-	if err != nil {
-		log.Fatalln(err)
-	}
-	signer := v4.NewSigner(sess.Config.Credentials)
+	creds := credentials.NewEnvCredentials()
+	signer := v4.NewSigner(creds)
 
 	req, err := http.NewRequest(*method, *url, strings.NewReader(*body))
 	if err != nil {
